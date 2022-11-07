@@ -1,0 +1,69 @@
+name: ogunmolawa_john
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.18.2 <3.0.0"
+
+dependencies:
+  flutter_web_plugins:
+    sdk: flutter
+  flutter:
+    sdk: flutter
+
+  responsive_builder: ^0.4.2
+  get_it: ^7.2.0
+  # provider_architecture:
+  # provider: ^3.1.0
+
+  cupertino_icons: ^1.0.2
+  cloud_firestore: ^4.0.1
+  url_launcher: any
+  
+  provider: ^6.0.3
+  intl: ^0.17.0
+  fluttertoast: ^8.0.8
+
+  gap: ^2.0.0
+  flutter_svg: ^1.1.5
+  font_awesome_flutter: ^10.1.0
+  firebase_core_web: ^2.0.0
+  firebase_core: ^2.0.0
+
+dev_dependencies:
+  build_runner:
+  flutter_gen_runner:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/gallery/
+    - assets/work/
+    - assets/icons/twotone/
+
+  fonts:
+    - family: OpenSans
+      fonts:
+        - asset: assets/fonts/OpenSans-Regular.ttf
+          weight: 400
+          style: normal
+        - asset: assets/fonts/OpenSans-ExtraBold.ttf
+          weight: 800
+
+flutter_gen:
+  output: lib/generated/
+  integrations:
+
+  fonts:
+    enabled: false
