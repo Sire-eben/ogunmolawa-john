@@ -50,6 +50,8 @@ flutter:
   assets:
     - assets/gallery/
     - assets/work/
+    - assets/images/
+    - assets/icons/
     - assets/icons/twotone/
 
   fonts:

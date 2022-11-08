@@ -65,10 +65,10 @@ class _HomeviewDesktopState extends State<HomeviewDesktop> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         const Gap(Insets.xl),
-                        const CircleAvatar(
+                        CircleAvatar(
                           radius: 100,
                           backgroundColor: AppColors.white,
-                          backgroundImage: AssetImage("assets/images/one.JPG"),
+                          backgroundImage: AssetImage(Assets.images.one.path),
                         ),
                         const Text(
                           "OGUNMOLAWA\nJOHN",

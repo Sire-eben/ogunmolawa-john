@@ -1,5 +1,6 @@
 import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/hover_extensions.dart';
+import 'package:ogunmolawa_john/generated/assets.gen.dart';
 import 'package:ogunmolawa_john/locator.dart';
 import 'package:ogunmolawa_john/core/routing/route_names.dart';
 import 'package:ogunmolawa_john/core/services/navigation_service.dart';
@@ -23,10 +24,10 @@ class NavbarLogo extends StatelessWidget {
             width: 40,
             color: AppColors.primaryBlue,
           ),
-          const Image(
+          Image(
               height: 32,
               image: AssetImage(
-                "assets/icons/logo.png",
+                Assets.icons.logo.path,
               )),
         ],
       ).showCursorOnHover,

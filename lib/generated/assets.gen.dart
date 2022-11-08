@@ -34,7 +34,54 @@ class $AssetsGalleryGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/facebook.png
+  AssetGenImage get facebook =>
+      const AssetGenImage('assets/icons/facebook.png');
+
+  /// File path: assets/icons/google.png
+  AssetGenImage get google => const AssetGenImage('assets/icons/google.png');
+
+  /// File path: assets/icons/logo.png
+  AssetGenImage get logo => const AssetGenImage('assets/icons/logo.png');
+
+  /// File path: assets/icons/logo_mark.png
+  AssetGenImage get logoMark =>
+      const AssetGenImage('assets/icons/logo_mark.png');
+
+  /// File path: assets/icons/playstore.png
+  AssetGenImage get playstore =>
+      const AssetGenImage('assets/icons/playstore.png');
+
+  /// File path: assets/icons/twitter.png
+  AssetGenImage get twitter => const AssetGenImage('assets/icons/twitter.png');
+
   $AssetsIconsTwotoneGen get twotone => const $AssetsIconsTwotoneGen();
+
+  /// List of all assets
+  List<AssetGenImage> get values =>
+      [facebook, google, logo, logoMark, playstore, twitter];
+}
+
+class $AssetsImagesGen {
+  const $AssetsImagesGen();
+
+  /// File path: assets/images/five.JPG
+  AssetGenImage get five => const AssetGenImage('assets/images/five.JPG');
+
+  /// File path: assets/images/four.JPG
+  AssetGenImage get four => const AssetGenImage('assets/images/four.JPG');
+
+  /// File path: assets/images/one.JPG
+  AssetGenImage get one => const AssetGenImage('assets/images/one.JPG');
+
+  /// File path: assets/images/three.JPG
+  AssetGenImage get three => const AssetGenImage('assets/images/three.JPG');
+
+  /// File path: assets/images/two.JPG
+  AssetGenImage get two => const AssetGenImage('assets/images/two.JPG');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [five, four, one, three, two];
 }
 
 class $AssetsWorkGen {
@@ -3693,6 +3740,7 @@ class Assets {
 
   static const $AssetsGalleryGen gallery = $AssetsGalleryGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
+  static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsWorkGen work = $AssetsWorkGen();
 }
 
