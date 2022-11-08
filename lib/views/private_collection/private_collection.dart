@@ -13,9 +13,11 @@ class PrivateCollection extends StatefulWidget {
 class _PrivateCollectionState extends State<PrivateCollection> {
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      mobile: const PrivateCollectionMobile(),
-      desktop: const PrivateCollectionDesktop(),
+    return Scaffold(
+      body: ScreenTypeLayout(
+        mobile: const PrivateCollectionMobile(),
+        desktop: const PrivateCollectionDesktop(),
+      ),
     );
   }
 }

@@ -13,9 +13,11 @@ class AboutMeView extends StatefulWidget {
 class _AboutMeViewState extends State<AboutMeView> {
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      mobile: const AboutMeViewMobile(),
-      desktop: const AboutMeViewDesktop(),
+    return Scaffold(
+      body: ScreenTypeLayout(
+        mobile: const AboutMeViewMobile(),
+        desktop: const AboutMeViewDesktop(),
+      ),
     );
   }
 }

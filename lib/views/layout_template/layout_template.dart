@@ -20,11 +20,6 @@ class _LayoutTemplateState extends State<LayoutTemplate> {
       return Scaffold(
           backgroundColor: Colors.white,
           key: scaffoldKey,
-
-          // drawer: sizing.deviceScreenType == DeviceScreenType.desktop
-          //     ? null
-          //     : const NavigationDrawer(),
-
           body: CenteredView(child: widget.child));
     });
   }

@@ -12,17 +12,17 @@ import 'package:flutter/widgets.dart';
 class $AssetsGalleryGen {
   const $AssetsGalleryGen();
 
-  /// File path: assets/gallery/five.JPG
-  AssetGenImage get five => const AssetGenImage('assets/gallery/five.JPG');
+  /// File path: assets/gallery/five.JPEG
+  AssetGenImage get five => const AssetGenImage('assets/gallery/five.JPEG');
 
-  /// File path: assets/gallery/four.jpg
-  AssetGenImage get four => const AssetGenImage('assets/gallery/four.jpg');
+  /// File path: assets/gallery/four.JPG
+  AssetGenImage get four => const AssetGenImage('assets/gallery/four.JPG');
 
   /// File path: assets/gallery/one.JPEG
   AssetGenImage get one => const AssetGenImage('assets/gallery/one.JPEG');
 
-  /// File path: assets/gallery/three.JPEG
-  AssetGenImage get three => const AssetGenImage('assets/gallery/three.JPEG');
+  /// File path: assets/gallery/three.jpg
+  AssetGenImage get three => const AssetGenImage('assets/gallery/three.jpg');
 
   /// File path: assets/gallery/two.jpg
   AssetGenImage get two => const AssetGenImage('assets/gallery/two.jpg');
@@ -68,6 +68,9 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/error.png
+  AssetGenImage get error => const AssetGenImage('assets/images/error.png');
+
   /// File path: assets/images/five.JPG
   AssetGenImage get five => const AssetGenImage('assets/images/five.JPG');
 
@@ -84,7 +87,7 @@ class $AssetsImagesGen {
   AssetGenImage get two => const AssetGenImage('assets/images/two.JPG');
 
   /// List of all assets
-  List<AssetGenImage> get values => [five, four, one, three, two];
+  List<AssetGenImage> get values => [error, five, four, one, three, two];
 }
 
 class $AssetsWorkGen {

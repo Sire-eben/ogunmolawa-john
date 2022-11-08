@@ -13,9 +13,11 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      mobile: const HomeviewMobile(),
-      desktop: const HomeviewDesktop(),
+    return Scaffold(
+      body: ScreenTypeLayout(
+        mobile: const HomeviewMobile(),
+        desktop: const HomeviewDesktop(),
+      ),
     );
   }
 }

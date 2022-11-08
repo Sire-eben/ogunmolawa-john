@@ -14,10 +14,12 @@ class GalleryView extends StatefulWidget {
 class _GalleryViewState extends State<GalleryView> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: ScreenTypeLayout(
-        mobile: const GalleryViewMobile(),
-        desktop: const GalleryViewDesktop(),
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: ScreenTypeLayout(
+          mobile: const GalleryViewMobile(),
+          desktop: const GalleryViewDesktop(),
+        ),
       ),
     );
   }

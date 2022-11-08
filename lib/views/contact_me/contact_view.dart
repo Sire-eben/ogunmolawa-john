@@ -16,9 +16,11 @@ class ContactView extends StatefulWidget {
 class _ContactViewState extends State<ContactView> {
   @override
   Widget build(BuildContext context) {
-    return ScreenTypeLayout(
-      mobile: const ContactViewMobile(),
-      desktop: const ContactViewDesktop(),
+    return Scaffold(
+      body: ScreenTypeLayout(
+        mobile: const ContactViewMobile(),
+        desktop: const ContactViewDesktop(),
+      ),
     );
   }
 }

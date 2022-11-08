@@ -5,6 +5,7 @@ import 'package:ogunmolawa_john/core/routing/route_names.dart';
 import 'package:ogunmolawa_john/core/services/navigation_service.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/context.dart';
 import 'package:ogunmolawa_john/core/widgets/call_to_action/call_to_action.dart';
+import 'package:ogunmolawa_john/generated/assets.gen.dart';
 import 'package:ogunmolawa_john/locator.dart';
 
 class PageNotFound extends StatelessWidget {
@@ -19,27 +20,31 @@ class PageNotFound extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              height: context.getHeight(.8),
+              height: context.getHeight(.6),
               width: context.getWidth(),
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
-                  image: AssetImage('assets/images/error.jpg'),
+                  image: AssetImage(Assets.images.error.path),
                 ),
               ),
             ),
-            const Gap(Insets.lg),
-            const Text(
-              "Oops! Something went wrong.\n"
-              "Looks like you tried to visit a page on our website that either doesn't exist or has been removed.",
-              textAlign: TextAlign.center,
+            const Padding(
+              padding: EdgeInsets.all(Insets.lg),
+              child: Text(
+                "Oops! Something went wrong.\n"
+                "Looks like you tried to visit a page on our website that either doesn't exist or has been removed.",
+                textAlign: TextAlign.center,
+              ),
             ),
-            const Gap(Insets.lg),
-            CallToAction(
-                title: 'Back To Home',
-                action: () {
-                  locator<NavigationService>().navigateTo(homeRoute);
-                })
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: Insets.lg),
+              child: CallToAction(
+                  title: 'Back To Home',
+                  action: () {
+                    locator<NavigationService>().navigateTo(homeRoute);
+                  }),
+            )
           ],
         ),
       ),

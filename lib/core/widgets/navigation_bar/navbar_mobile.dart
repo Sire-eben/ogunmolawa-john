@@ -2,6 +2,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/context.dart';
 import 'package:ogunmolawa_john/core/widgets/images/local_svg_icon.dart';
+import 'package:ogunmolawa_john/core/widgets/navigation_drawer/navigation_drawer.dart';
 import 'package:ogunmolawa_john/generated/assets.gen.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,8 @@ class NavBarMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     // final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
-    return Container(
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 600),
       height: 60,
       width: context.width,
       color: AppColors.white,
@@ -31,9 +33,16 @@ class NavBarMobile extends StatelessWidget {
           const NavbarLogo(),
           IconButton(
             onPressed: () {
-              // scaffoldKey.currentState!.openDrawer();
+              showDialog(
+                  context: context,
+                  builder: (context) {
+                    return NavigationDrawer();
+                  });
             },
-            icon: FaIcon(FontAwesomeIcons.mobileButton),
+            icon: Icon(
+              Icons.menu,
+              color: AppColors.primaryBlue,
+            ),
           ),
         ],
       ),

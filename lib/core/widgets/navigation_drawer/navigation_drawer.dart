@@ -1,7 +1,9 @@
 import 'package:ogunmolawa_john/config/constants.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
+import 'package:ogunmolawa_john/core/utils/extensions/context.dart';
 import 'package:ogunmolawa_john/core/widgets/navigation_bar/nav_btn.dart';
 import 'package:ogunmolawa_john/core/widgets/navigation_drawer/nav_drawer_item.dart';
+import 'package:ogunmolawa_john/core/widgets/social_links/social_links.dart';
 import 'package:ogunmolawa_john/generated/assets.gen.dart';
 import 'package:ogunmolawa_john/core/routing/route_names.dart';
 import 'package:flutter/material.dart';
@@ -13,11 +15,13 @@ class NavigationDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      alignment: Alignment.topCenter,
-      width: double.maxFinite,
-      height: 350,
-      // padding: const EdgeInsets.all(Insets.lg),
-      margin: const EdgeInsets.all(Insets.lg),
+      alignment: Alignment.center,
+      width: context.getWidth(.8),
+      height: context.getHeight(.6),
+      margin: EdgeInsets.symmetric(
+        vertical: context.getHeight(.2),
+        horizontal: Insets.xl,
+      ),
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Corners.mdRadius),
         color: Colors.white,
@@ -51,7 +55,8 @@ class NavigationDrawer extends StatelessWidget {
           ),
           NavButton(
             action: () {},
-          )
+          ),
+          const SocialLinks(),
         ],
       ),
     );
