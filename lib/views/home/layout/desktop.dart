@@ -4,12 +4,10 @@ import 'package:gap/gap.dart';
 import 'package:ogunmolawa_john/config/constants.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/core/routing/route_names.dart';
-import 'package:ogunmolawa_john/core/services/navigation_service.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/context.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/hover_extensions.dart';
-import 'package:ogunmolawa_john/core/widgets/images/local_svg_icon.dart';
+import 'package:ogunmolawa_john/core/widgets/home/quick_links.dart';
 import 'package:ogunmolawa_john/generated/assets.gen.dart';
-import 'package:ogunmolawa_john/locator.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class HomeviewDesktop extends StatefulWidget {
@@ -46,6 +44,7 @@ class _HomeviewDesktopState extends State<HomeviewDesktop> {
               maxWidth: context.getWidth(.5),
             ),
             decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(9),
               boxShadow: [
                 BoxShadow(
                     blurRadius: 40,
@@ -204,54 +203,9 @@ class _HomeviewDesktopState extends State<HomeviewDesktop> {
                 ],
               ),
             ),
-          ),
+          ).moveCardsUpOnHover,
         ),
       ],
-    );
-  }
-}
-
-class QuickLinks extends StatelessWidget {
-  final String text, icon;
-  final String navigationPath;
-
-  const QuickLinks({
-    Key? key,
-    required this.text,
-    required this.icon,
-    required this.navigationPath,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        locator<NavigationService>().navigateTo(navigationPath);
-      },
-      child: Container(
-        margin: const EdgeInsets.only(bottom: Insets.md),
-        decoration: BoxDecoration(
-          color: AppColors.primaryColor,
-          borderRadius: BorderRadius.circular(6),
-        ),
-        padding: const EdgeInsets.all(8.0),
-        child: Row(
-          children: [
-            LocalSvgIcon(
-              icon,
-              color: AppColors.backgroundDark,
-            ),
-            const Gap(Insets.sm),
-            Text(
-              text,
-              style: const TextStyle(
-                // decoration: TextDecoration.underline,
-                color: AppColors.backgroundDark,
-              ),
-            )
-          ],
-        ),
-      ).showCursorOnHover.moveUpOnHover,
     );
   }
 }

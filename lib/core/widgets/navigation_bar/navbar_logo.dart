@@ -1,3 +1,4 @@
+import 'package:gap/gap.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/hover_extensions.dart';
 import 'package:ogunmolawa_john/generated/assets.gen.dart';
@@ -21,9 +22,10 @@ class NavbarLogo extends StatelessWidget {
         children: [
           Container(
             height: 30,
-            width: 40,
+            width: 30,
             color: AppColors.primaryBlue,
           ),
+          const Gap(Insets.md),
           Image(
               height: 32,
               image: AssetImage(

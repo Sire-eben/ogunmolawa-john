@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ogunmolawa_john/core/routing/route_names.dart';
 import 'package:ogunmolawa_john/views/404/error.dart';
+import 'package:ogunmolawa_john/views/about_me/about_me.dart';
 import 'package:ogunmolawa_john/views/contact_me/contact_view.dart';
 import 'package:ogunmolawa_john/views/gallery/gallery_view.dart';
 import 'package:ogunmolawa_john/views/home/homeview.dart';
@@ -10,6 +11,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
     case homeRoute:
       return _getPageRoute(const HomeView(), settings);
+    case aboutRoute:
+      return _getPageRoute(const AboutMeView(), settings);
     case contactRoute:
       return _getPageRoute(const ContactView(), settings);
     case galleryRoute:

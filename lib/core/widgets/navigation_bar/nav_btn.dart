@@ -28,7 +28,7 @@ class NavButton extends StatelessWidget {
           alignment: Alignment.center,
           // margin: const EdgeInsets.only(right: Insets.lg * 2),
           decoration: BoxDecoration(
-            color: backgroundColor ?? AppColors.primaryColor,
+            color: backgroundColor ?? AppColors.primaryBlue,
             borderRadius: const BorderRadius.all(Corners.smRadius),
           ),
           child: Text(

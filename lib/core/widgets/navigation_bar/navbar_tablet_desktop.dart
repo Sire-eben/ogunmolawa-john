@@ -15,7 +15,10 @@ class NavBarTabletDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     return Container(
-      padding: const EdgeInsets.only(left: Insets.lg),
+      padding: const EdgeInsets.only(
+        left: Insets.lg,
+        right: Insets.lg,
+      ),
       height: context.getHeight(.1),
       color: Colors.white,
       width: width,

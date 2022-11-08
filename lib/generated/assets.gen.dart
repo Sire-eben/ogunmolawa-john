@@ -52,6 +52,9 @@ class $AssetsIconsGen {
   AssetGenImage get playstore =>
       const AssetGenImage('assets/icons/playstore.png');
 
+  /// File path: assets/icons/quote.png
+  AssetGenImage get quote => const AssetGenImage('assets/icons/quote.png');
+
   /// File path: assets/icons/twitter.png
   AssetGenImage get twitter => const AssetGenImage('assets/icons/twitter.png');
 
@@ -59,7 +62,7 @@ class $AssetsIconsGen {
 
   /// List of all assets
   List<AssetGenImage> get values =>
-      [facebook, google, logo, logoMark, playstore, twitter];
+      [facebook, google, logo, logoMark, playstore, quote, twitter];
 }
 
 class $AssetsImagesGen {

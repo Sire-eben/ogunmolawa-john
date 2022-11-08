@@ -22,7 +22,7 @@ class CallToActionMobile extends StatelessWidget {
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
               padding: const EdgeInsets.all(Insets.md),
-              backgroundColor: AppColors.primaryColor,
+              backgroundColor: AppColors.primaryBlue,
               elevation: 10,
               shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Corners.xsRadius))),
