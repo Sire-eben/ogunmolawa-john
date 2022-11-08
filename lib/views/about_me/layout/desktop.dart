@@ -58,7 +58,7 @@ class _AboutMeViewDesktopState extends State<AboutMeViewDesktop> {
     "2021",
     "2021",
     "",
-    "",
+    "Yasuke",
     "2020",
   ];
 
@@ -135,7 +135,7 @@ class _AboutMeViewDesktopState extends State<AboutMeViewDesktop> {
                   alignment: Alignment.center,
                   width: context.getWidth(.85),
                   // padding: const EdgeInsets.all(Insets.xl * 2),
-                  height: context.getHeight(.6),
+                  height: context.getHeight(.7),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
                     // color: Colors.white.withOpacity(.4),
@@ -191,7 +191,7 @@ class _AboutMeViewDesktopState extends State<AboutMeViewDesktop> {
                                             fontSize: 20,
                                             fontWeight: FontWeight.w700),
                                       ),
-                                      Gap(Insets.sm / 2),
+                                      // Gap(Insets.sm / 2),
                                       Text(
                                         "Profile",
                                         style: TextStyle(

@@ -3,8 +3,10 @@ import 'package:gap/gap.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/context.dart';
 import 'package:ogunmolawa_john/core/widgets/navigation_bar/navbar_tablet_desktop.dart';
-import 'package:ogunmolawa_john/core/widgets/private_collection/collection_card.dart';
+import 'package:ogunmolawa_john/core/widgets/private_collection/collection_card_desktop.dart';
 import 'package:ogunmolawa_john/generated/assets.gen.dart';
+
+import '../../../core/widgets/footer/footer.dart';
 
 class PrivateCollectionDesktop extends StatefulWidget {
   const PrivateCollectionDesktop({super.key});
@@ -61,37 +63,38 @@ class _PrivateCollectionDesktopState extends State<PrivateCollectionDesktop> {
                     style: TextStyle(fontSize: 13),
                   ),
                 ),
-                PrivateCollectionCard(
+                PrivateCollectionCardDesktop(
                   title: "ALICE",
                   subtitle: "2022",
                   dimension: "20 x 24 inches",
                   imagePath: Assets.work.collectionOne.path,
                 ),
-                PrivateCollectionCard(
+                PrivateCollectionCardDesktop(
                   title: "DAVID",
                   subtitle: "2022",
                   dimension: "20 x 24 inches",
                   imagePath: Assets.work.collectionTwo.path,
                 ),
-                PrivateCollectionCard(
+                PrivateCollectionCardDesktop(
                   title: "NELSON MANDELA",
                   subtitle: "2021",
                   dimension: "20 x 24 inches",
                   imagePath: Assets.work.collectionThree.path,
                 ),
-                PrivateCollectionCard(
+                PrivateCollectionCardDesktop(
                   title: "C. ODUMEGU OJUKWU",
                   subtitle: "2021",
                   dimension: "16 x 20 inches",
                   imagePath: Assets.work.collectionFour.path,
                 ),
-                PrivateCollectionCard(
+                PrivateCollectionCardDesktop(
                   title: "FELA",
                   subtitle: "2021",
                   dimension: "16 x 20 inches",
                   imagePath: Assets.work.collectionSeven.path,
                 ),
                 const Gap(Insets.xl * 1.5),
+                const Footer(),
               ],
             ),
           ),

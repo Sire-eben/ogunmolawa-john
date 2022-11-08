@@ -4,18 +4,19 @@ import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/context.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/hover_extensions.dart';
 
-class GalleryCards extends StatelessWidget {
+class PrivateCollectionCardDesktop extends StatelessWidget {
   final String title;
   final String imagePath;
-  final String description;
-  final String subtitle;
+  final String? description;
+  final String subtitle, dimension;
 
-  const GalleryCards(
+  const PrivateCollectionCardDesktop(
       {super.key,
       required this.title,
       required this.subtitle,
+      required this.dimension,
       required this.imagePath,
-      required this.description});
+      this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -36,8 +37,10 @@ class GalleryCards extends StatelessWidget {
           Expanded(
               flex: 3,
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Gap(Insets.xl * 1.5),
+                  // const Gap(Insets.xl * 1.5),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -60,7 +63,15 @@ class GalleryCards extends StatelessWidget {
                           ),
                           const Gap(Insets.sm / 2),
                           Text(
-                            subtitle,
+                            "Year: $subtitle",
+                            style: const TextStyle(
+                                color: AppColors.primaryDark,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400),
+                          ),
+                          const Gap(Insets.sm / 2),
+                          Text(
+                            "Dimension: $dimension",
                             style: const TextStyle(
                                 color: AppColors.primaryDark,
                                 fontSize: 12,
@@ -74,7 +85,7 @@ class GalleryCards extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(
                         vertical: Insets.xl, horizontal: Insets.xl),
                     child: Text(
-                      description,
+                      description ?? "",
                       style: const TextStyle(
                           color: AppColors.primaryDark,
                           fontSize: 14,

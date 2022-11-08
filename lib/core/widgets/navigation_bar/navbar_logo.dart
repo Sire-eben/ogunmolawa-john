@@ -22,7 +22,7 @@ class NavbarLogo extends StatelessWidget {
         children: [
           Container(
             height: 30,
-            width: 30,
+            width: 15,
             color: AppColors.primaryBlue,
           ),
           const Gap(Insets.md),

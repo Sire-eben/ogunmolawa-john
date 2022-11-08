@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/context.dart';
-import 'package:ogunmolawa_john/core/widgets/gallery/gallery_card.dart';
+import 'package:ogunmolawa_john/core/widgets/footer/footer.dart';
+import 'package:ogunmolawa_john/core/widgets/gallery/gallery_card_desktop.dart';
 import 'package:ogunmolawa_john/core/widgets/navigation_bar/navbar_tablet_desktop.dart';
 import 'package:ogunmolawa_john/generated/assets.gen.dart';
 
@@ -60,14 +61,14 @@ class _GalleryViewDesktopState extends State<GalleryViewDesktop> {
                     style: TextStyle(fontSize: 13),
                   ),
                 ),
-                GalleryCards(
+                GalleryCardsDesktop(
                   title: "HAUNTED",
                   subtitle: "Charcoal and Graphite On Paper",
                   description:
                       "‘Haunted by thoughts of a system that compels us to bear the brunt of their poor political decisions and systemic oppression’",
                   imagePath: Assets.gallery.one.path,
                 ),
-                GalleryCards(
+                GalleryCardsDesktop(
                   title: "LIBERATION",
                   subtitle: "Charcoal and Graphite On Paper",
                   description:
@@ -75,7 +76,7 @@ class _GalleryViewDesktopState extends State<GalleryViewDesktop> {
                       "Confront your discomfort and fear to see. Reach beyond and break Free. Don't limit yourself, be Liberated",
                   imagePath: Assets.gallery.two.path,
                 ),
-                GalleryCards(
+                GalleryCardsDesktop(
                   title: "BLACK PEARL #1 2021",
                   subtitle: "Charcoal and Graphite On Paper",
                   description:
@@ -83,20 +84,21 @@ class _GalleryViewDesktopState extends State<GalleryViewDesktop> {
                       "The lingering gaze of my muse alludes to my subject remaining defiant and courageous despite discrimination, odds stacked against them  and unconscious bias in the society.",
                   imagePath: Assets.gallery.three.path,
                 ),
-                GalleryCards(
+                GalleryCardsDesktop(
                   title: "BLACK PEARL #2 2022",
                   subtitle: "Charcoal and Graphite On Paper",
                   description:
                       "‘Haunted by thoughts of a system that compels us to bear the brunt of their poor political decisions and systemic oppression’",
                   imagePath: Assets.gallery.four.path,
                 ),
-                GalleryCards(
+                GalleryCardsDesktop(
                   title: "solitude",
                   subtitle: "Charcoal and Graphite On Paper",
                   description: "",
                   imagePath: Assets.gallery.five.path,
                 ),
                 const Gap(Insets.xl * 1.5),
+                const Footer(),
               ],
             ),
           ),

@@ -4,19 +4,18 @@ import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/context.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/hover_extensions.dart';
 
-class PrivateCollectionCard extends StatelessWidget {
+class GalleryCardsDesktop extends StatelessWidget {
   final String title;
   final String imagePath;
-  final String? description;
-  final String subtitle, dimension;
+  final String description;
+  final String subtitle;
 
-  const PrivateCollectionCard(
+  const GalleryCardsDesktop(
       {super.key,
       required this.title,
       required this.subtitle,
-      required this.dimension,
       required this.imagePath,
-      this.description});
+      required this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -37,10 +36,8 @@ class PrivateCollectionCard extends StatelessWidget {
           Expanded(
               flex: 3,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // const Gap(Insets.xl * 1.5),
+                  const Gap(Insets.xl * 1.5),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -63,15 +60,7 @@ class PrivateCollectionCard extends StatelessWidget {
                           ),
                           const Gap(Insets.sm / 2),
                           Text(
-                            "Year: $subtitle",
-                            style: const TextStyle(
-                                color: AppColors.primaryDark,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w400),
-                          ),
-                          const Gap(Insets.sm / 2),
-                          Text(
-                            "Dimension: $dimension",
+                            subtitle,
                             style: const TextStyle(
                                 color: AppColors.primaryDark,
                                 fontSize: 12,
@@ -85,7 +74,7 @@ class PrivateCollectionCard extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(
                         vertical: Insets.xl, horizontal: Insets.xl),
                     child: Text(
-                      description ?? "",
+                      description,
                       style: const TextStyle(
                           color: AppColors.primaryDark,
                           fontSize: 14,
