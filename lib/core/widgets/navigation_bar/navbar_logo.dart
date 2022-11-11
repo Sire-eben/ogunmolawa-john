@@ -19,6 +19,7 @@ class NavbarLogo extends StatelessWidget {
         locator<NavigationService>().navigateTo(homeRoute);
       },
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             height: 30,

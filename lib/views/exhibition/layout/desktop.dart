@@ -8,14 +8,14 @@ import 'package:ogunmolawa_john/core/widgets/gallery/card/gallery_card_desktop.d
 import 'package:ogunmolawa_john/core/widgets/navigation_bar/navbar_tablet_desktop.dart';
 import 'package:ogunmolawa_john/generated/assets.gen.dart';
 
-class GalleryViewDesktop extends StatefulWidget {
-  const GalleryViewDesktop({super.key});
+class ExhibitionViewDesktop extends StatefulWidget {
+  const ExhibitionViewDesktop({super.key});
 
   @override
-  State<GalleryViewDesktop> createState() => _GalleryViewDesktopState();
+  State<ExhibitionViewDesktop> createState() => _ExhibitionViewDesktopState();
 }
 
-class _GalleryViewDesktopState extends State<GalleryViewDesktop> {
+class _ExhibitionViewDesktopState extends State<ExhibitionViewDesktop> {
   @override
   Widget build(BuildContext context) {
     return Stack(

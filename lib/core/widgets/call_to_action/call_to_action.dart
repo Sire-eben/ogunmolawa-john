@@ -9,18 +9,26 @@ import 'call_to_action_tablet_desktop.dart';
 class CallToAction extends StatelessWidget {
   final String title;
   final VoidCallback action;
+  final Color? color;
 
-  const CallToAction({super.key, required this.title, required this.action});
+  const CallToAction({
+    super.key,
+    required this.title,
+    required this.action,
+    this.color,
+  });
 
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
       mobile: CallToActionMobile(
         text: title,
+        color: color,
         action: action,
       ),
       desktop: CallToActionTabletDesktop(
         text: title,
+        color: color,
         action: action,
       ),
     ).showCursorOnHover;

@@ -27,9 +27,9 @@ class NavBarItem extends StatelessWidget {
         child: Text(
           label,
           style: const TextStyle(
-            color: AppColors.backgroundDark,
-            fontSize: FontSizes.sm,
-            fontWeight: FontWeight.w500,
+            color: AppColors.primaryDark,
+            fontSize: FontSizes.md,
+            fontWeight: FontWeight.w600,
           ),
         ),
       ).showCursorOnHover.moveUpOnHover,

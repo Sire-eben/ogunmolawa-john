@@ -1,3 +1,4 @@
+import 'package:gap/gap.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/core/routing/route_names.dart';
 import 'package:flutter/material.dart';
@@ -15,36 +16,62 @@ class NavBarTabletDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     return Container(
+      decoration: BoxDecoration(color: Colors.white, boxShadow: [
+        BoxShadow(
+          color: AppColors.primaryDark.withOpacity(.2),
+          offset: const Offset(0, -4),
+          blurRadius: 4,
+          spreadRadius: 6,
+        )
+      ]),
       padding: const EdgeInsets.only(
         left: Insets.lg,
         right: Insets.lg,
       ),
-      height: context.getHeight(.1),
-      color: Colors.white,
+      height: context.getHeight(.15),
+      // color: Colors.white,
       width: width,
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const NavbarLogo(),
-          const Expanded(
-            child: SizedBox(),
-          ),
-          NavBarItem(
-            label: "About me",
-            navigationPath: aboutRoute,
-            icon: Assets.icons.twotone.user,
-          ),
-          NavBarItem(
-            label: "Gallery",
-            navigationPath: galleryRoute,
-            icon: Assets.icons.twotone.gallery,
-          ),
-          NavBarItem(
-            label: "Private Collection",
-            navigationPath: privateCollectionRoute,
-            icon: Assets.icons.twotone.user,
-          ),
-          NavButton(
-            action: () => launchUrlString(""),
+          // const Expanded(
+          //   child: SizedBox(),
+          // ),
+          const Gap(Insets.lg),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              NavBarItem(
+                label: "Biography",
+                navigationPath: aboutRoute,
+                icon: Assets.icons.twotone.user,
+              ),
+              NavBarItem(
+                label: "Gallery",
+                navigationPath: galleryRoute,
+                icon: Assets.icons.twotone.gallery,
+              ),
+              NavBarItem(
+                label: "Private Collection",
+                navigationPath: privateCollectionRoute,
+                icon: Assets.icons.twotone.user,
+              ),
+              NavBarItem(
+                label: "Exhibitions",
+                navigationPath: exhibitionRoute,
+                icon: Assets.icons.twotone.user,
+              ),
+              NavBarItem(
+                label: "Contact me",
+                navigationPath: contactRoute,
+                icon: Assets.icons.twotone.user,
+              ),
+              // NavButton(
+              //   action: () => launchUrlString(""),
+              // ),
+            ],
           ),
         ],
       ),

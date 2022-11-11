@@ -1,5 +1,5 @@
 name: ogunmolawa_john
-description: A new Flutter project.
+description: Ogunmolawa John Portfolio - A Full time Nigerian artist working primarily with charcoal and Graphite Pencil and has participated in exhibitions around the world. 
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -24,6 +24,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   cloud_firestore: ^4.0.1
   url_launcher: any
+  url_strategy: ^0.2.0
   
   provider: ^6.0.3
   intl: ^0.17.0

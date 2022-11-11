@@ -7,10 +7,12 @@ import '../images/local_svg_icon.dart';
 class CallToActionMobile extends StatelessWidget {
   final String text;
   final VoidCallback action;
+  final Color? color;
 
   const CallToActionMobile({
     Key? key,
     required this.text,
+    this.color,
     required this.action,
   }) : super(key: key);
 
@@ -22,7 +24,7 @@ class CallToActionMobile extends StatelessWidget {
       child: ElevatedButton(
           style: ElevatedButton.styleFrom(
               padding: const EdgeInsets.all(Insets.md),
-              backgroundColor: AppColors.primaryBlue,
+              backgroundColor: color ?? AppColors.primaryBlue,
               elevation: 10,
               shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Corners.xsRadius))),

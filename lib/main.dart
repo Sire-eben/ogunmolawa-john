@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/constants/strings.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 import 'core/routing/route_names.dart';
 import 'core/routing/router.dart';
@@ -11,6 +12,7 @@ import 'views/layout_template/layout_template.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  setPathUrlStrategy();
   await Firebase.initializeApp(
     options: const FirebaseOptions(
       apiKey: "AIzaSyA0TXEhc8JRYCe6y84xcsP8ndlqeGSPRIQ",

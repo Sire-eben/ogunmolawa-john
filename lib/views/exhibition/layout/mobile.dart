@@ -3,19 +3,20 @@ import 'package:gap/gap.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/core/routing/route_names.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/context.dart';
-import 'package:ogunmolawa_john/core/widgets/footer/footer.dart';
-import 'package:ogunmolawa_john/core/widgets/gallery/card/gallery_card_desktop.dart';
-import 'package:ogunmolawa_john/core/widgets/navigation_bar/navbar_tablet_desktop.dart';
+import 'package:ogunmolawa_john/core/widgets/gallery/card/gallery_card_mobile.dart';
+import 'package:ogunmolawa_john/core/widgets/navigation_bar/navbar.dart';
 import 'package:ogunmolawa_john/generated/assets.gen.dart';
 
-class GalleryViewDesktop extends StatefulWidget {
-  const GalleryViewDesktop({super.key});
+import '../../../core/widgets/footer/footer.dart';
+
+class ExhibitionViewMobile extends StatefulWidget {
+  const ExhibitionViewMobile({super.key});
 
   @override
-  State<GalleryViewDesktop> createState() => _GalleryViewDesktopState();
+  State<ExhibitionViewMobile> createState() => _ExhibitionViewMobileState();
 }
 
-class _GalleryViewDesktopState extends State<GalleryViewDesktop> {
+class _ExhibitionViewMobileState extends State<ExhibitionViewMobile> {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -35,8 +36,8 @@ class _GalleryViewDesktopState extends State<GalleryViewDesktop> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
-                        height: 40,
-                        width: 40,
+                        height: 20,
+                        width: 20,
                         color: AppColors.primaryBlue,
                       ),
                       const Gap(Insets.md),
@@ -50,8 +51,9 @@ class _GalleryViewDesktopState extends State<GalleryViewDesktop> {
                     ],
                   ),
                 ),
-                ConstrainedBox(
-                  constraints: BoxConstraints(maxWidth: context.getWidth(.5)),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: Insets.lg),
+                  constraints: BoxConstraints(maxWidth: context.width),
                   child: const Text(
                     "Although a graduate of Civil Engineering at University Of Abuja, "
                     "my passion for art is as strong as ever and I’m currently practicing art Full-time. "
@@ -62,7 +64,7 @@ class _GalleryViewDesktopState extends State<GalleryViewDesktop> {
                     style: TextStyle(fontSize: 13),
                   ),
                 ),
-                GalleryCardsDesktop(
+                GalleryCardsMobile(
                   title: "HAUNTED",
                   subtitle: "Charcoal and Graphite On Paper",
                   description:
@@ -70,7 +72,7 @@ class _GalleryViewDesktopState extends State<GalleryViewDesktop> {
                   imagePath: Assets.gallery.one.path,
                   routeName: hauntedRoute,
                 ),
-                GalleryCardsDesktop(
+                GalleryCardsMobile(
                   title: "LIBERATION",
                   subtitle: "Charcoal and Graphite On Paper",
                   description:
@@ -79,7 +81,7 @@ class _GalleryViewDesktopState extends State<GalleryViewDesktop> {
                   imagePath: Assets.gallery.two.path,
                   routeName: liberationRoute,
                 ),
-                GalleryCardsDesktop(
+                GalleryCardsMobile(
                   title: "BLACK PEARL #1 2021",
                   subtitle: "Charcoal and Graphite On Paper",
                   description:
@@ -88,7 +90,7 @@ class _GalleryViewDesktopState extends State<GalleryViewDesktop> {
                   imagePath: Assets.gallery.three.path,
                   routeName: pearl1Route,
                 ),
-                GalleryCardsDesktop(
+                GalleryCardsMobile(
                   title: "BLACK PEARL #2 2022",
                   subtitle: "Charcoal and Graphite On Paper",
                   description:
@@ -97,7 +99,7 @@ class _GalleryViewDesktopState extends State<GalleryViewDesktop> {
                   imagePath: Assets.gallery.four.path,
                   routeName: pearl2Route,
                 ),
-                GalleryCardsDesktop(
+                GalleryCardsMobile(
                   title: "solitude",
                   subtitle: "Charcoal and Graphite On Paper",
                   description:
@@ -113,7 +115,7 @@ class _GalleryViewDesktopState extends State<GalleryViewDesktop> {
         ),
         const Positioned(
           top: 0,
-          child: NavBarTabletDesktop(),
+          child: NavBar(),
         ),
       ],
     );
