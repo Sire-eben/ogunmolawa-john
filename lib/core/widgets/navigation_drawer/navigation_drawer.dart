@@ -39,7 +39,7 @@ class NavigationDrawer extends StatelessWidget {
             navigationPath: homeRoute,
           ),
           DrawerItem(
-            title: "About Me",
+            title: "Biography",
             icon: Assets.icons.twotone.user,
             navigationPath: aboutRoute,
           ),
@@ -53,10 +53,17 @@ class NavigationDrawer extends StatelessWidget {
             icon: Assets.icons.twotone.judge,
             navigationPath: privateCollectionRoute,
           ),
+          DrawerItem(
+            title: "Exhibitions",
+            icon: Assets.icons.twotone.judge,
+            navigationPath: exhibitionRoute,
+          ),
           NavButton(
             action: () {},
           ),
-          const SocialLinks(),
+          const SocialLinks(
+            alignment: MainAxisAlignment.spaceEvenly,
+          ),
         ],
       ),
     );

@@ -2,6 +2,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/constants/strings.dart';
+import 'package:ogunmolawa_john/core/providers/contact_provider.dart';
+import 'package:provider/provider.dart';
 import 'package:url_strategy/url_strategy.dart';
 
 import 'core/routing/route_names.dart';
@@ -34,14 +36,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: webTitle,
-      theme: AppTheme.defaultTheme(context),
-      builder: (context, child) => LayoutTemplate(child: child!),
-      navigatorKey: locator<NavigationService>().navigatorKey,
-      onGenerateRoute: generateRoute,
-      initialRoute: homeRoute,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ContactProvider()),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: webTitle,
+        theme: AppTheme.defaultTheme(context),
+        builder: (context, child) => LayoutTemplate(child: child!),
+        navigatorKey: locator<NavigationService>().navigatorKey,
+        onGenerateRoute: generateRoute,
+        initialRoute: homeRoute,
+      ),
     );
   }
 }

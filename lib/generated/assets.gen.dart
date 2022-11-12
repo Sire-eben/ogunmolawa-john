@@ -31,6 +31,17 @@ class $AssetsGalleryGen {
   List<AssetGenImage> get values => [five, four, one, three, two];
 }
 
+class $AssetsGifGen {
+  const $AssetsGifGen();
+
+  /// File path: assets/gif/pre-loader.gif
+  AssetGenImage get preLoader =>
+      const AssetGenImage('assets/gif/pre-loader.gif');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [preLoader];
+}
+
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
@@ -3745,6 +3756,7 @@ class Assets {
   Assets._();
 
   static const $AssetsGalleryGen gallery = $AssetsGalleryGen();
+  static const $AssetsGifGen gif = $AssetsGifGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsWorkGen work = $AssetsWorkGen();

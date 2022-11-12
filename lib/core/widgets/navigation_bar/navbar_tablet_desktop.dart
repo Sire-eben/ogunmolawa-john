@@ -36,9 +36,6 @@ class NavBarTabletDesktop extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const NavbarLogo(),
-          // const Expanded(
-          //   child: SizedBox(),
-          // ),
           const Gap(Insets.lg),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

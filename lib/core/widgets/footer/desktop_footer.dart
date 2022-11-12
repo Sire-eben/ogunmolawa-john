@@ -34,24 +34,42 @@ class DesktopFooter extends StatelessWidget {
           Expanded(
               flex: 2,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
-                  Text('Call'),
+                  Text(
+                    'Call',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   Text('+234 802 201 5752'),
                 ],
               )),
           Expanded(
               flex: 2,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
-                  Text('Write'),
+                  Text(
+                    'Write',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   Text('john@ogunmolawajohn.com'),
                 ],
               )),
           Expanded(
               flex: 2,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
-                  Text('Follow'),
+                  Text(
+                    'Follow',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   SocialLinks(),
                 ],
               )),
