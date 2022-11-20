@@ -2,11 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
 
-const mainParagraph =
-    "Access to accredited tutors, academic materials and SIWES placements. All in one app. Join the breej now!";
-const aboutParagraph =
-    "we provide access to accredited tutors, academic materials and SIWES placements. All in one app. Join the breej now!";
-
 const publicKey = "FLWPUBK-d73b1078701eb0b31671456c0a0c4980-X";
 const encryptionKey = "9d8661bb336939598f8e2dd1";
 
