@@ -3,8 +3,6 @@ import 'package:gap/gap.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/context.dart';
 import 'package:ogunmolawa_john/core/widgets/navigation_bar/navbar.dart';
-import 'package:ogunmolawa_john/core/widgets/navigation_bar/navbar_tablet_desktop.dart';
-import 'package:ogunmolawa_john/core/widgets/private_collection/collection_card_desktop.dart';
 import 'package:ogunmolawa_john/core/widgets/private_collection/collection_card_mobile.dart';
 import 'package:ogunmolawa_john/generated/assets.gen.dart';
 

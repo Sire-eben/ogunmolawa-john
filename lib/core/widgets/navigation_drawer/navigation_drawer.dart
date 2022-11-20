@@ -1,4 +1,3 @@
-import 'package:ogunmolawa_john/config/constants.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/context.dart';
 import 'package:ogunmolawa_john/core/widgets/navigation_bar/nav_btn.dart';
@@ -7,7 +6,6 @@ import 'package:ogunmolawa_john/core/widgets/social_links/social_links.dart';
 import 'package:ogunmolawa_john/generated/assets.gen.dart';
 import 'package:ogunmolawa_john/core/routing/route_names.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({super.key});
@@ -20,7 +18,7 @@ class NavigationDrawer extends StatelessWidget {
       height: context.getHeight(.6),
       margin: EdgeInsets.symmetric(
         vertical: context.getHeight(.15),
-        horizontal: Insets.xl * 2,
+        horizontal: Insets.xl,
       ),
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Corners.mdRadius),

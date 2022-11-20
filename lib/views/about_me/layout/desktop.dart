@@ -138,13 +138,6 @@ class _AboutMeViewDesktopState extends State<AboutMeViewDesktop> {
                   height: context.getHeight(.7),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
-                    // color: Colors.white.withOpacity(.4),
-                    boxShadow: [
-                      // BoxShadow(
-                      //     blurRadius: 40,
-                      //     spreadRadius: 1,
-                      //     color: Colors.grey.shade400)
-                    ],
                   ),
                   child: Row(
                     children: [
@@ -207,7 +200,7 @@ class _AboutMeViewDesktopState extends State<AboutMeViewDesktop> {
                                 padding: EdgeInsets.symmetric(
                                     vertical: Insets.xl, horizontal: Insets.xl),
                                 child: Text(
-                                  "Ogunmolawa John Olubukola (born 1996) a Nigerian artist, activist and a Civil Engineer. My style of art is known as hyper realism which is inspired by telling my subjects stories and their journey which involves spending countless hours working on an artwork to stimulate deep and strong emotions in order to connect more intimately with my viewers."
+                                  "Ogunmolawa John Olubukola (born 1996) a Nigerian artist, activist and a Civil Engineer. I create hyper-realistic drawings which are inspired by telling my subjects stories and their journey which involves spending countless hours working on an artwork to stimulate deep and strong emotions in order to connect more intimately with my viewers."
                                   "I began drawing at the age of six and work primarily with charcoal and graphite on paper, I use my works to speaks on the happenings in my society, Systemic Oppression, the struggles of the common youths and triumphs of surviving through the challenges faced, I perceives my art as a response to society and a way to inspire one or two people to re-evaluate their socio-political structures. In my work “Haunted”, it depicts how the resilient Nigerian youth with ‘spark’ in their eyes and willpower are oppressed and restrained by the ’harms’ of the government using armed forces as tools resulting in Police Brutality and several bias policies to suppress them. In my work Liberation shows his subject breaking free from the shackles of oppression. ",
                                   style: TextStyle(
                                       color: AppColors.primaryDark,

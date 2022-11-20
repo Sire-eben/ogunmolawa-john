@@ -56,6 +56,8 @@ class ContactProvider with ChangeNotifier {
         ),
       );
 
+      print(response.body);
+
       await _firestore.collection("contact").doc(thisInstant).set({
         "name": name,
         "email": email,
@@ -67,7 +69,7 @@ class ContactProvider with ChangeNotifier {
         notifyListeners();
         locator<NavigationService>().navigateTo(contactRoute);
       });
-    } on FirebaseException catch (error) {
+    } on FirebaseException {
       _isLoading = false;
       notifyListeners();
       Fluttertoast.showToast(

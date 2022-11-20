@@ -103,7 +103,7 @@ class _GalleryViewMobileState extends State<GalleryViewMobile> {
                   title: "solitude",
                   subtitle: "Charcoal and Graphite On Paper",
                   description:
-                      "This piece was drawn during the heavy lockdowns of 2020. I was often alone throughout the whole period, during this period I was able to understand a whole Lot of things that I got so immersed in my own company, I got to understand Solitude is richness in self, Independence and a path unto self discovery, “Sometimes everyone around you won\’t see your vision but it\’s up to you to believe in yourself\"",
+                      "This piece was drawn during the heavy lockdowns of 2020. I was often alone throughout the whole period, during this period I was able to understand a whole Lot of things that I got so immersed in my own company, I got to understand Solitude is richness in self, Independence and a path unto self discovery, “Sometimes everyone around you won’t see your vision but it’s up to you to believe in yourself\"",
                   imagePath: Assets.gallery.five.path,
                   routeName: solitudeRoute,
                 ),

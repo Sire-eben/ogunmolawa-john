@@ -96,16 +96,9 @@ class _AboutMeViewMobileState extends State<AboutMeViewMobile> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
+        SizedBox(
           height: context.height,
           width: context.width,
-          // decoration: BoxDecoration(
-          //     color: AppColors.primaryColor,
-          //     image: DecorationImage(
-          //       image: AssetImage(Assets.images.one.path),
-          //       fit: BoxFit.cover,
-          //       opacity: .2,
-          //     )),
         ),
         SingleChildScrollView(
           child: Column(
@@ -138,7 +131,7 @@ class _AboutMeViewMobileState extends State<AboutMeViewMobile> {
                 margin: const EdgeInsets.only(bottom: Insets.lg),
                 constraints: BoxConstraints(maxWidth: context.width),
                 child: const Text(
-                  "Ogunmolawa John Olubukola (born 1996) a Nigerian artist, activist and a Civil Engineer. My style of art is known as hyper realism which is inspired by telling my subjects stories and their journey which involves spending countless hours working on an artwork to stimulate deep and strong emotions in order to connect more intimately with my viewers.",
+                  "Ogunmolawa John Olubukola (born 1996) a Nigerian artist, activist and a Civil Engineer. I create hyper-realistic drawings which are inspired by telling my subjects stories and their journey which involves spending countless hours working on an artwork to stimulate deep and strong emotions in order to connect more intimately with my viewers.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 13,

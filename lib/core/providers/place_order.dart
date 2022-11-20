@@ -3,10 +3,7 @@ import 'dart:convert';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:ogunmolawa_john/core/routing/route_names.dart';
-import 'package:ogunmolawa_john/core/services/navigation_service.dart';
 import 'package:ogunmolawa_john/core/utils/utils.dart';
-import 'package:ogunmolawa_john/locator.dart';
 import 'package:http/http.dart' as http;
 
 class PlaceOrderProvider with ChangeNotifier {
@@ -56,6 +53,7 @@ class PlaceOrderProvider with ChangeNotifier {
           },
         ),
       );
+      print(response.body);
 
       await _firestore.collection("orders").doc(thisInstant).set({
         "name": name,
@@ -72,7 +70,7 @@ class PlaceOrderProvider with ChangeNotifier {
             duration: Duration(seconds: 5),
             content: Text("Your Order has been placed and received ")));
       });
-    } on FirebaseException catch (error) {
+    } on FirebaseException {
       _isLoading = false;
       notifyListeners();
       Fluttertoast.showToast(

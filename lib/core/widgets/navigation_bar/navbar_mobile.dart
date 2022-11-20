@@ -1,9 +1,6 @@
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/context.dart';
-import 'package:ogunmolawa_john/core/widgets/images/local_svg_icon.dart';
 import 'package:ogunmolawa_john/core/widgets/navigation_drawer/navigation_drawer.dart';
-import 'package:ogunmolawa_john/generated/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 import 'navbar_logo.dart';
@@ -32,18 +29,20 @@ class NavBarMobile extends StatelessWidget {
         children: [
           const NavbarLogo(),
           IconButton(
+            padding: const EdgeInsets.only(right: Insets.lg),
             onPressed: () {
               showDialog(
                   context: context,
                   builder: (context) {
-                    return NavigationDrawer();
+                    return const NavigationDrawer();
                   });
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.menu,
               color: AppColors.primaryBlue,
             ),
           ),
+          // const Gap(Insets.lg),
         ],
       ),
     );

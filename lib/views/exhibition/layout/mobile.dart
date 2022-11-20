@@ -34,8 +34,8 @@ class _ExhibitionViewMobileState extends State<ExhibitionViewMobile> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
-                        height: 40,
-                        width: 40,
+                        height: 20,
+                        width: 20,
                         color: AppColors.primaryBlue,
                       ),
                       const Gap(Insets.md),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ogunmolawa_john/core/widgets/footer/footer.dart';
 import 'package:ogunmolawa_john/views/gallery/layout/desktop.dart';
 import 'package:ogunmolawa_john/views/gallery/layout/mobile.dart';
 import 'package:responsive_builder/responsive_builder.dart';

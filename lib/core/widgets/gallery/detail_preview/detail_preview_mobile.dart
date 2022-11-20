@@ -9,7 +9,6 @@ import 'package:ogunmolawa_john/core/utils/validators.dart';
 import 'package:ogunmolawa_john/core/widgets/call_to_action/call_to_action.dart';
 import 'package:ogunmolawa_john/core/widgets/footer/footer.dart';
 import 'package:ogunmolawa_john/core/widgets/navigation_bar/navbar.dart';
-import 'package:ogunmolawa_john/core/widgets/navigation_bar/navbar_tablet_desktop.dart';
 import 'package:ogunmolawa_john/core/widgets/textfield/textfield.dart';
 import 'package:provider/provider.dart';
 
@@ -68,7 +67,7 @@ class _DetailPreviewWidgetMobileState extends State<DetailPreviewWidgetMobile>
                                   ),
                                   child: Column(
                                     children: [
-                                      Gap(Insets.xl * 1.5),
+                                      const Gap(Insets.xl * 1.5),
                                       Align(
                                         alignment: Alignment.centerLeft,
                                         child: GestureDetector(
@@ -78,7 +77,7 @@ class _DetailPreviewWidgetMobileState extends State<DetailPreviewWidgetMobile>
                                           child: Container(
                                             height: 30,
                                             width: 30,
-                                            decoration: BoxDecoration(
+                                            decoration: const BoxDecoration(
                                                 shape: BoxShape.circle,
                                                 color: AppColors.primaryBlue),
                                             child: const Icon(

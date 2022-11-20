@@ -1,5 +1,3 @@
-import 'package:gap/gap.dart';
-import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/hover_extensions.dart';
 import 'package:ogunmolawa_john/generated/assets.gen.dart';
 import 'package:ogunmolawa_john/locator.dart';
@@ -21,17 +19,16 @@ class NavbarLogo extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // Container(
-          //   height: 30,
-          //   width: 15,
-          //   color: AppColors.primaryBlue,
-          // ),
-          // const Gap(Insets.md),
           Image(
               height: 32,
               image: AssetImage(
                 Assets.icons.logo.path,
               )),
+          // const Gap(Insets.md),
+          // const Text(
+          //   'Ogunmolawa John',
+          //   style: TextStyle(fontWeight: FontWeight.w800, fontSize: 22),
+          // ),
         ],
       ).showCursorOnHover,
     );

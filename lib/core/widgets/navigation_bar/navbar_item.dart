@@ -1,4 +1,3 @@
-import 'package:gap/gap.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/locator.dart';
 import 'package:ogunmolawa_john/core/services/navigation_service.dart';

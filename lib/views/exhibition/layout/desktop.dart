@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
-import 'package:ogunmolawa_john/core/routing/route_names.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/context.dart';
 import 'package:ogunmolawa_john/core/widgets/exhibition/exhibition_card.dart';
 import 'package:ogunmolawa_john/core/widgets/footer/footer.dart';
-import 'package:ogunmolawa_john/core/widgets/gallery/card/gallery_card_desktop.dart';
 import 'package:ogunmolawa_john/core/widgets/navigation_bar/navbar_tablet_desktop.dart';
-import 'package:ogunmolawa_john/generated/assets.gen.dart';
 
 class ExhibitionViewDesktop extends StatefulWidget {
   const ExhibitionViewDesktop({super.key});

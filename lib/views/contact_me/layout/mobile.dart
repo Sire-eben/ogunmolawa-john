@@ -8,7 +8,6 @@ import 'package:ogunmolawa_john/core/utils/validators.dart';
 import 'package:ogunmolawa_john/core/widgets/call_to_action/call_to_action.dart';
 import 'package:ogunmolawa_john/core/widgets/footer/footer.dart';
 import 'package:ogunmolawa_john/core/widgets/navigation_bar/navbar.dart';
-import 'package:ogunmolawa_john/core/widgets/navigation_bar/navbar_tablet_desktop.dart';
 import 'package:ogunmolawa_john/core/widgets/textfield/textfield.dart';
 import 'package:ogunmolawa_john/generated/assets.gen.dart';
 import 'package:provider/provider.dart';
