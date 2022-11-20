@@ -88,9 +88,21 @@ class _PrivateCollectionDesktopState extends State<PrivateCollectionDesktop> {
                   imagePath: Assets.work.collectionFour.path,
                 ),
                 PrivateCollectionCardDesktop(
+                  title: "Wiz Khalifah",
+                  subtitle: "2022",
+                  dimension: "24 x 36 inches",
+                  imagePath: Assets.work.collectionFive.path,
+                ),
+                PrivateCollectionCardDesktop(
+                  title: "Yasuke",
+                  subtitle: "2022",
+                  dimension: "36 by 42 inches",
+                  imagePath: Assets.work.collectionSix.path,
+                ),
+                PrivateCollectionCardDesktop(
                   title: "FELA",
                   subtitle: "2021",
-                  dimension: "16 x 20 inches",
+                  dimension: "24 x 36 inches",
                   imagePath: Assets.work.collectionSeven.path,
                 ),
                 const Gap(Insets.xl * 1.5),

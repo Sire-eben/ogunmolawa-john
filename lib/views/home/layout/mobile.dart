@@ -83,7 +83,7 @@ class _HomeviewMobileState extends State<HomeviewMobile> {
                             ),
                           ),
                           const Text(
-                            "FINE ARTIST",
+                            "ARTIST",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               letterSpacing: 7,
@@ -102,24 +102,6 @@ class _HomeviewMobileState extends State<HomeviewMobile> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          // const Text(
-                          //   "Hey there!",
-                          //   textAlign: TextAlign.center,
-                          //   style: TextStyle(
-                          //     fontSize: 24,
-                          //     fontWeight: FontWeight.w700,
-                          //   ),
-                          // ),
-                          // const Text(
-                          //   "Good to have you here.\nI perceive my art as a response to society and a way to inspire one "
-                          //   "or two people to re-evaluate their socio-political structures and spread positivity despite the challenges faced.",
-                          //   textAlign: TextAlign.left,
-                          //   style: TextStyle(
-                          //     fontSize: 14,
-                          //     fontWeight: FontWeight.normal,
-                          //   ),
-                          // ),
-                          // const Gap(Insets.md),
                           Container(
                             padding: const EdgeInsets.all(Insets.md),
                             child: Column(

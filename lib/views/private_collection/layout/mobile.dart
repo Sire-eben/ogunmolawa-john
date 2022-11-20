@@ -91,9 +91,21 @@ class _PrivateCollectionMobileState extends State<PrivateCollectionMobile> {
                   imagePath: Assets.work.collectionFour.path,
                 ),
                 PrivateCollectionCardMobile(
+                  title: "Wiz Khalifah",
+                  subtitle: "2022",
+                  dimension: "24 x 36 inches",
+                  imagePath: Assets.work.collectionFive.path,
+                ),
+                PrivateCollectionCardMobile(
+                  title: "Yasuke",
+                  subtitle: "2022",
+                  dimension: "36 by 42 inches",
+                  imagePath: Assets.work.collectionSix.path,
+                ),
+                PrivateCollectionCardMobile(
                   title: "FELA",
                   subtitle: "2021",
-                  dimension: "16 x 20 inches",
+                  dimension: "24 x 36 inches",
                   imagePath: Assets.work.collectionSeven.path,
                 ),
                 const Gap(Insets.xl * 1.5),

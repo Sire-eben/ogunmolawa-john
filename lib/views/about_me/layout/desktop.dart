@@ -42,8 +42,8 @@ class _AboutMeViewDesktopState extends State<AboutMeViewDesktop> {
     "DAVID",
     "MANDELA",
     "C. ODUMEGU OJUKWU",
-    "",
-    "",
+    "Wiz Khalifa",
+    "Yasuke",
     "FELA",
   ];
 
@@ -57,8 +57,8 @@ class _AboutMeViewDesktopState extends State<AboutMeViewDesktop> {
     "2022",
     "2021",
     "2021",
-    "",
-    "Yasuke",
+    "2022",
+    "2022",
     "2020",
   ];
 
@@ -228,7 +228,7 @@ class _AboutMeViewDesktopState extends State<AboutMeViewDesktop> {
                     alignment: Alignment.center,
                     child: Container(
                       // alignment: Alignment.center,
-                      height: 250,
+                      // height: 250,
                       width: context.getWidth(.85),
                       padding:
                           const EdgeInsets.symmetric(horizontal: Insets.xl * 3),
@@ -240,6 +240,10 @@ class _AboutMeViewDesktopState extends State<AboutMeViewDesktop> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
+                          Image.asset(
+                            Assets.icons.quote.path,
+                            height: 50,
+                          ),
                           Text(
                             famousQuote,
                             textAlign: TextAlign.center,
@@ -261,16 +265,6 @@ class _AboutMeViewDesktopState extends State<AboutMeViewDesktop> {
                       ),
                     ),
                   ),
-                  Align(
-                    alignment: Alignment.center,
-                    child: Positioned(
-                      top: 0,
-                      child: Image.asset(
-                        Assets.icons.quote.path,
-                        height: 50,
-                      ),
-                    ),
-                  )
                 ],
               ),
               const Gap(Insets.xl * 2),

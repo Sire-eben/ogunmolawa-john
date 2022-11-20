@@ -19,8 +19,8 @@ class NavigationDrawer extends StatelessWidget {
       width: context.getWidth(.8),
       height: context.getHeight(.6),
       margin: EdgeInsets.symmetric(
-        vertical: context.getHeight(.2),
-        horizontal: Insets.xl,
+        vertical: context.getHeight(.15),
+        horizontal: Insets.xl * 2,
       ),
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Corners.mdRadius),
@@ -31,7 +31,7 @@ class NavigationDrawer extends StatelessWidget {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           DrawerItem(
             title: "Home",

@@ -31,7 +31,7 @@ class DrawerItem extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-      ).showCursorOnHover.moveUpOnHover,
+      ).showCursorOnHover,
     );
   }
 }

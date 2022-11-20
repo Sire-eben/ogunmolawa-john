@@ -7,6 +7,7 @@ import 'package:ogunmolawa_john/core/routing/route_names.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/context.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/hover_extensions.dart';
 import 'package:ogunmolawa_john/core/widgets/home/quick_links.dart';
+import 'package:ogunmolawa_john/core/widgets/social_links/social_links.dart';
 import 'package:ogunmolawa_john/generated/assets.gen.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -98,48 +99,11 @@ class _HomeviewDesktopState extends State<HomeviewDesktop> {
                         Align(
                           alignment: Alignment.bottomCenter,
                           child: Container(
-                            height: 50,
-                            width: context.width,
-                            color: Colors.white,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                IconButton(
-                                  onPressed: () {
-                                    launchUrlString(linkedlnUrl);
-                                  },
-                                  icon: const FaIcon(
-                                    FontAwesomeIcons.linkedin,
-                                    color: Colors.black,
-                                  ),
-                                ).moveUpOnHover,
-                                IconButton(
-                                  onPressed: () {
-                                    launchUrlString(instagramUrl);
-                                  },
-                                  icon: const FaIcon(
-                                    FontAwesomeIcons.instagram,
-                                    color: Colors.black,
-                                  ),
-                                ).moveUpOnHover,
-                                IconButton(
-                                  onPressed: () {},
-                                  icon: const FaIcon(
-                                    FontAwesomeIcons.facebookF,
-                                    color: Colors.black,
-                                  ),
-                                ).moveUpOnHover,
-                                IconButton(
-                                  onPressed: () {},
-                                  icon: const FaIcon(
-                                    FontAwesomeIcons.twitter,
-                                    color: Colors.black,
-                                  ),
-                                ).moveUpOnHover,
-                              ],
-                            ),
-                          ),
+                              height: 50,
+                              width: context.width,
+                              color: Colors.white,
+                              child: const SocialLinks(
+                                  alignment: MainAxisAlignment.spaceEvenly)),
                         ),
                       ],
                     ),

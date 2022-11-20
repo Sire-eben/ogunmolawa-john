@@ -99,13 +99,13 @@ class _AboutMeViewMobileState extends State<AboutMeViewMobile> {
         Container(
           height: context.height,
           width: context.width,
-          decoration: BoxDecoration(
-              color: AppColors.primaryColor,
-              image: DecorationImage(
-                image: AssetImage(Assets.images.one.path),
-                fit: BoxFit.cover,
-                opacity: .2,
-              )),
+          // decoration: BoxDecoration(
+          //     color: AppColors.primaryColor,
+          //     image: DecorationImage(
+          //       image: AssetImage(Assets.images.one.path),
+          //       fit: BoxFit.cover,
+          //       opacity: .2,
+          //     )),
         ),
         SingleChildScrollView(
           child: Column(

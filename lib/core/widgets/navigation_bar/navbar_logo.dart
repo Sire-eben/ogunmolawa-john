@@ -21,12 +21,12 @@ class NavbarLogo extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            height: 30,
-            width: 15,
-            color: AppColors.primaryBlue,
-          ),
-          const Gap(Insets.md),
+          // Container(
+          //   height: 30,
+          //   width: 15,
+          //   color: AppColors.primaryBlue,
+          // ),
+          // const Gap(Insets.md),
           Image(
               height: 32,
               image: AssetImage(

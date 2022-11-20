@@ -18,7 +18,7 @@ class TextInputField extends StatelessWidget {
   final bool obscureText;
   final Widget? prefixIcon;
   final TextEditingController? controller;
-  final bool enabled;
+  final bool enabled, readOnly;
   final TextStyle? labelStyle;
   final TextStyle? hintStyle;
   final TextStyle? style;
@@ -50,6 +50,7 @@ class TextInputField extends StatelessWidget {
     this.autoValidateMode,
     this.maxLines = 1,
     this.enabled = true,
+    this.readOnly = false,
     this.obscureText = false,
     this.textCapitalization,
   }) : super(key: key);
@@ -82,6 +83,7 @@ class TextInputField extends StatelessWidget {
           const Gap(4),
         ],
         TextFormField(
+          readOnly: readOnly,
           controller: controller,
           onSaved: (input) => onSaved?.call((input ?? "").trim()),
           autovalidateMode: autoValidateMode,

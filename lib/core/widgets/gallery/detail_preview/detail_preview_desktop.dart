@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/core/mixins/form_mixin.dart';
-import 'package:ogunmolawa_john/core/providers/contact_provider.dart';
+import 'package:ogunmolawa_john/core/providers/place_order.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/context.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/hover_extensions.dart';
 import 'package:ogunmolawa_john/core/utils/validators.dart';
@@ -33,8 +33,7 @@ class _DetailPreviewWidgetDesktopState extends State<DetailPreviewWidgetDesktop>
     with FormMixin {
   final nameController = TextEditingController();
   final emailController = TextEditingController();
-  final subjectController = TextEditingController();
-  final messageController = TextEditingController();
+  final phoneController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -214,72 +213,128 @@ class _DetailPreviewWidgetDesktopState extends State<DetailPreviewWidgetDesktop>
                           CallToAction(
                             title: 'Place Order',
                             color: AppColors.primaryDark,
-                            action: () => showDialog(
+                            action: () => showBottomSheet(
+                              backgroundColor: Colors.transparent,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20)),
                               context: context,
                               builder: (context) => Container(
-                                width: context.getWidth(.5),
+                                alignment: Alignment.center,
+                                padding: const EdgeInsets.all(Insets.xl),
+                                margin: const EdgeInsets.only(
+                                  left: Insets.xl * 2,
+                                  bottom: Insets.lg,
+                                ),
+                                width: context.getWidth(.4),
                                 constraints: BoxConstraints(
-                                  maxHeight: context.getHeight(.8),
+                                  maxHeight: context.getHeight(.7),
                                   maxWidth: context.getWidth(.5),
                                 ),
-                                decoration: const BoxDecoration(
+                                decoration: BoxDecoration(
                                   color: Colors.white,
+                                  borderRadius: BorderRadius.circular(20),
                                 ),
-                                child: Consumer<ContactProvider>(
-                                    builder: (context, contact, child) {
-                                  return Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      TextInputField(
-                                        labelText: "Your Name",
-                                        controller: nameController,
-                                        validator: (input) =>
-                                            Validators.validateString()(input),
-                                      ),
-                                      const Gap(Insets.xl),
-                                      TextInputField(
-                                        labelText: 'Email',
-                                        controller: emailController,
-                                        validator: (input) =>
-                                            Validators.validateEmail(input),
-                                      ),
-                                      const Gap(Insets.xl),
-                                      TextInputField(
-                                        labelText: 'Subject',
-                                        controller: subjectController,
-                                        validator: (input) =>
-                                            Validators.validateString()(input),
-                                      ),
-                                      const Gap(Insets.xl),
-                                      TextInputField(
-                                        labelText: 'Message',
-                                        maxLines: 5,
-                                        controller: messageController,
-                                        validator: (input) =>
-                                            Validators.validateString()(input),
-                                      ),
-                                      const Gap(Insets.md),
-                                      CallToAction(
-                                        title: 'Send',
-                                        action: () {
-                                          if (formKey.currentState!
-                                              .validate()) {
-                                            contact.sendMessage(
-                                              context,
-                                              nameController.text.trim(),
-                                              emailController.text.trim(),
-                                              subjectController.text.trim(),
-                                              messageController.text.trim(),
-                                            );
-                                          }
-                                        },
-                                      ),
-                                    ],
+                                child: Consumer<PlaceOrderProvider>(
+                                    builder: (context, auth, child) {
+                                  return SingleChildScrollView(
+                                    child: Form(
+                                      key: formKey,
+                                      child: auth.isLoading == true
+                                          ? const Center(
+                                              child: CircularProgressIndicator(
+                                                  strokeWidth: 3,
+                                                  color: AppColors.primaryBlue),
+                                            )
+                                          : Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                const Text(
+                                                  "Fill the form below to place your order.",
+                                                  style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 15,
+                                                  ),
+                                                ),
+                                                const Gap(Insets.lg),
+                                                TextInputField(
+                                                  labelText: "Full Name",
+                                                  controller: nameController,
+                                                  validator: (input) =>
+                                                      Validators
+                                                              .validateString()(
+                                                          input),
+                                                ),
+                                                const Gap(Insets.xl),
+                                                TextInputField(
+                                                  labelText: 'Email',
+                                                  controller: emailController,
+                                                  inputType: TextInputType
+                                                      .emailAddress,
+                                                  validator: (input) =>
+                                                      Validators.validateEmail(
+                                                          input),
+                                                ),
+                                                const Gap(Insets.xl),
+                                                TextInputField(
+                                                  labelText: 'Phone Number',
+                                                  controller: phoneController,
+                                                  inputType:
+                                                      TextInputType.phone,
+                                                  validator: (input) => Validators
+                                                          .validatePhoneNumber()(
+                                                      input),
+                                                ),
+                                                const Gap(Insets.xl),
+                                                TextInputField(
+                                                  labelText: 'Art Title',
+                                                  hintText: widget.title,
+                                                  readOnly: true,
+                                                ),
+                                                const Gap(Insets.xl),
+                                                TextInputField(
+                                                  labelText: 'Price',
+                                                  hintText: "\$${widget.price}",
+                                                  readOnly: true,
+                                                ),
+                                                const Gap(Insets.xl),
+                                                TextInputField(
+                                                  labelText: 'Dimension',
+                                                  hintText:
+                                                      "${widget.size} inches",
+                                                  readOnly: true,
+                                                ),
+                                                const Gap(Insets.md),
+                                                CallToAction(
+                                                  title: 'Place Order',
+                                                  action: () {
+                                                    if (formKey.currentState!
+                                                        .validate()) {
+                                                      auth.placeOrder(
+                                                        context,
+                                                        nameController.text
+                                                            .trim(),
+                                                        emailController.text
+                                                            .trim(),
+                                                        phoneController.text
+                                                            .trim(),
+                                                        widget.title,
+                                                        widget.price,
+                                                        widget.size,
+                                                      );
+                                                    }
+                                                  },
+                                                ),
+                                              ],
+                                            ),
+                                    ),
                                   );
                                 }),
                               ),
                             ),
-                          )
+                          ),
                         ],
                       )),
                     ],

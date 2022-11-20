@@ -1,3 +1,4 @@
+import 'package:gap/gap.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/locator.dart';
 import 'package:ogunmolawa_john/core/services/navigation_service.dart';
@@ -24,13 +25,23 @@ class NavBarItem extends StatelessWidget {
         onTap: () {
           locator<NavigationService>().navigateTo(navigationPath);
         },
-        child: Text(
-          label,
-          style: const TextStyle(
-            color: AppColors.primaryDark,
-            fontSize: FontSizes.md,
-            fontWeight: FontWeight.w600,
-          ),
+        child: Column(
+          children: [
+            Text(
+              label,
+              style: const TextStyle(
+                color: AppColors.primaryDark,
+                fontSize: FontSizes.md,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            // const Spacer(),
+            // Container(
+            //   width: 150,
+            //   height: 3,
+            //   color: AppColors.primaryColor,
+            // )
+          ],
         ),
       ).showCursorOnHover.moveUpOnHover,
     );

@@ -17,7 +17,7 @@ class PlaceOrderProvider with ChangeNotifier {
   bool get isLoading => _isLoading;
 
 //CREATE NEW USER ACCOUNT METHOD
-  Future<void> sendMessage(
+  Future<void> placeOrder(
     BuildContext context,
     String name,
     String email,
@@ -68,7 +68,9 @@ class PlaceOrderProvider with ChangeNotifier {
       }).whenComplete(() {
         _isLoading = false;
         notifyListeners();
-        locator<NavigationService>().navigateTo(contactRoute);
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+            duration: Duration(seconds: 5),
+            content: Text("Your Order has been placed and received ")));
       });
     } on FirebaseException catch (error) {
       _isLoading = false;

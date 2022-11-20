@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/constants/strings.dart';
 import 'package:ogunmolawa_john/core/providers/contact_provider.dart';
+import 'package:ogunmolawa_john/core/providers/place_order.dart';
 import 'package:provider/provider.dart';
 import 'package:url_strategy/url_strategy.dart';
 
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => ContactProvider()),
+        ChangeNotifierProvider(create: (_) => PlaceOrderProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

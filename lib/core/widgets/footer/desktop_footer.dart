@@ -42,7 +42,7 @@ class DesktopFooter extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text('+234 802 201 5752'),
+                  Text(whatsappNumber),
                 ],
               )),
           Expanded(
@@ -56,7 +56,7 @@ class DesktopFooter extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text('john@ogunmolawajohn.com'),
+                  Text(emailAddress),
                 ],
               )),
           Expanded(

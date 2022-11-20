@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:ogunmolawa_john/config/constants.dart';
 import 'package:ogunmolawa_john/config/theme.dart';
 import 'package:ogunmolawa_john/core/utils/extensions/context.dart';
 import 'package:ogunmolawa_john/core/widgets/social_links/social_links.dart';
@@ -33,7 +34,7 @@ class MobileFooter extends StatelessWidget {
                     'Call',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  Text('+234 802 201 5752'),
+                  Text(whatsappNumber),
                 ],
               )),
               Expanded(
@@ -44,7 +45,7 @@ class MobileFooter extends StatelessWidget {
                     'Write',
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  Text('john@ogunmolawajohn.com'),
+                  Text(emailAddress),
                 ],
               )),
             ],
