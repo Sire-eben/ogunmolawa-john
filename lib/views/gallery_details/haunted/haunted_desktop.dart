@@ -14,7 +14,7 @@ class _HauntedViewDesktopState extends State<HauntedViewDesktop> {
   Widget build(BuildContext context) {
     return DetailPreviewWidgetDesktop(
       title: "HAUNTED",
-      price: "4,000",
+      price: "3,000",
       story:
           "‘Haunted by thoughts of a system that compels us to bear the brunt of their poor political decisions and systemic oppression’",
       size: "21 X 30 in",

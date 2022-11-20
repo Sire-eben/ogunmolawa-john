@@ -43,13 +43,6 @@ class _HomeviewMobileState extends State<HomeviewMobile> {
             margin: const EdgeInsets.symmetric(vertical: Insets.xl),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(9),
-              boxShadow: [
-                BoxShadow(
-                  blurRadius: 60,
-                  spreadRadius: 3,
-                  color: Colors.grey.shade400,
-                )
-              ],
             ),
             child: Center(
               child: SingleChildScrollView(

@@ -14,7 +14,7 @@ class _LiberationViewDesktopState extends State<LiberationViewDesktop> {
   Widget build(BuildContext context) {
     return DetailPreviewWidgetDesktop(
       title: "LIBERATION",
-      price: "4,000",
+      price: "3,000",
       story:
           "Don't let the bonds of fear and doubt keep you from attempting the impossible."
           "Confront your discomfort and fear to see. Reach beyond and break Free. Don't limit yourself, be Liberated",
