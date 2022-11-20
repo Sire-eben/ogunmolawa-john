@@ -5,6 +5,6 @@ OgunMolawa John - A Full time Nigerian artist working primarily with charcoal an
 
 ## Deploy and compile project
 
-'''
+```
 flutter build web && firebase deploy
-'''
+```
