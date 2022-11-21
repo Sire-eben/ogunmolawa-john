@@ -30,9 +30,9 @@ class ContactProvider with ChangeNotifier {
     try {
       _isLoading = true;
       notifyListeners();
-      const serviceId = "service_p52odfu";
-      const templateId = "template_2g91ubu";
-      const userId = "y8jvXhfc8NTKlzrXr";
+      const serviceId = "service_cfwbvma";
+      const templateId = "template_997gihs";
+      const userId = "snLgXggbjf0GYs0yI";
 
       final thisInstant = getTimestamp();
       final url = Uri.parse("https://api.emailjs.com/api/v1.0/email/send");
