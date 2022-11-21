@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "ogunmola-john"
-  }
+  },
+  "targets": {
+    "ogunmola-john": {
+      "hosting": {
+        "portfolio": [
+          "ogunmola-john"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
